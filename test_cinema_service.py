@@ -44,11 +44,13 @@ def test_get_all_artists(url: str):
 
 def test_get_artist_by_id(url: str):
     res = requests.get(url).json()
-    assert (res == {'artists_id': 1,
-                    'name': 'Kany West',
-                    'age': '47',
-                    'auditions': '1 billion',
-                    'genre': 'rap, R&B, electronic, gospel'})
+    assert (res == {
+            "movies_id": 1,
+            "name": "KinoMax",
+            "description": "47",
+            "visitors": "1 billion",
+            "address": "123 Main Street"
+        })
 
 
 if __name__ == '__main__':
