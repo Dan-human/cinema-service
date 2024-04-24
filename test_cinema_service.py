@@ -5,35 +5,35 @@ def test_get_all_cinemas(url: str):
     res = requests.get(url).json()
     assert (res == [
         {
-            "movies_id": 1,
+            "cinemas_id": 1,
             "name": "KinoMax",
             "description": "47",
             "visitors": "1 billion",
             "address": "123 Main Street"
         },
         {
-            "movies_id": 2,
+            "cinemas_id": 2,
             "name": "Cineplex",
             "description": "47",
             "visitors": "1 billion",
             "address": "456 Elm Street"
         },
         {
-            "movies_id": 3,
+            "cinemas_id": 3,
             "name": "SilverScreen",
             "description": "47",
             "visitors": "1 billion",
             "address": "789 Oak Avenue"
         },
         {
-            "movies_id": 4,
+            "cinemas_id": 4,
             "name": "StarCinema",
             "description": "47",
             "visitors": "1 billion",
             "address": "1010 Maple Drive"
         },
         {
-            "movies_id": 5,
+            "cinemas_id": 5,
             "name": "GoldenTheater",
             "description": "47",
             "visitors": "1 billion",
@@ -45,7 +45,7 @@ def test_get_all_cinemas(url: str):
 def test_get_cinema_by_id(url: str):
     res = requests.get(url).json()
     assert (res == {
-            "movies_id": 1,
+            "cinemas_id": 1,
             "name": "KinoMax",
             "description": "47",
             "visitors": "1 billion",
