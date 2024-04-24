@@ -1,7 +1,7 @@
 import requests
 
 
-def test_get_all_artists(url: str):
+def test_get_all_cinemas(url: str):
     res = requests.get(url).json()
     assert (res == [
         {
@@ -42,7 +42,7 @@ def test_get_all_artists(url: str):
     ])
 
 
-def test_get_artist_by_id(url: str):
+def test_get_cinema_by_id(url: str):
     res = requests.get(url).json()
     assert (res == {
             "movies_id": 1,
@@ -54,6 +54,6 @@ def test_get_artist_by_id(url: str):
 
 
 if __name__ == '__main__':
-    URL = 'http://127.0.0.1:80/api/v1/artists/'
-    test_get_artist_by_id(URL + '1')
-    test_get_all_artists(URL)
+    URL = 'http://127.0.0.1:80/api/v1/cinemas/'
+    test_get_cinema_by_id(URL + '1')
+    test_get_all_cinemas(URL)
