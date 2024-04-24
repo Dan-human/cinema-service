@@ -2,7 +2,6 @@ from fastapi import FastAPI, APIRouter
 import httpx
 from fastapi import APIRouter, HTTPException
 
-
 app = FastAPI(openapi_url="/api/v1/cinemas/openapi.json", docs_url="/api/v1/cinemas/docs")
 
 cinemas_router = APIRouter()
@@ -55,7 +54,7 @@ async def read_cinemas():
 async def read_cinema(cinemas_id: int):
     for cinema in cinemas:
         if cinema['cinemas_id'] == cinemas_id:
-            return cinemas
+            return cinema
     return None
 
 app.include_router(cinemas_router, prefix='/api/v1/cinemas', tags=['cinemas'])
