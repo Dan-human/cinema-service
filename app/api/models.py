@@ -7,7 +7,7 @@ class CinemaIn(BaseModel):
     description: str
     visitors: str
     address: str
-    movie_id: List[int]
+    movies_id: List[int]
 
 
 class CinemaOut(CinemaIn):
@@ -19,4 +19,4 @@ class ArtistUpdate(CinemaIn):
     age: Optional[str] = None
     auditions: Optional[str] = None
     genre: Optional[str] = None
-    movie_id: Optional[List[int]] = None
+    movies_id: Optional[List[int]] = None
